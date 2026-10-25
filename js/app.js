@@ -331,6 +331,14 @@ function initializeApp() {
 
     setupModeButtons();
 
+    window.addEventListener("storage", function(event) {
+
+        if (event.key === "theme") {
+            applyTheme();
+        }
+
+    });
+
 }
 
 
@@ -352,4 +360,3 @@ if (
     initializeApp();
 
 }
-
